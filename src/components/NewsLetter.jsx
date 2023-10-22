@@ -9,7 +9,7 @@ const NewsLetter = () => {
   const [openModal, setOpenModal] = useState(false);
   const handleCloseModal = () => setOpenModal(false);
 
-  const [email, setEmail] = useState("@");
+  const [email, setEmail] = useState("");
   let isEmailValid = true;
 
   const defferedEmailValue = useDeferredValue(email);
@@ -25,7 +25,7 @@ const NewsLetter = () => {
 
   return (
     //Container
-    <div className="relative w-screen min-h-screen flex overflow-hidden sm:items-center sm:justify-center bg-slate-700">
+    <div className="relative w-screen min-h-screen flex overflow-hidden sm:items-center sm:justify-center bg-[#36384e]">
       {/* Card-Container */}
       <div className="w-full flex flex-col-reverse items-center justify-center bg-white rounded-xl shadow-lg overflow-hidden sm:p-2 sm:w-max sm:min-h-max sm:flex-row sm:gap-4">
         <section className="w-full max-w-md h-max flex flex-col gap-3 p-5 sm:p-10 sm:w-max">
@@ -101,7 +101,7 @@ const ThanksModal = ({ open, email, handleCloseModal }) => {
   return (
     // Wrapper
     <div
-      className={`absolute z-10 w-screen h-screen bg-slate-700 flex items-center justify-center ${
+      className={`absolute z-10 w-screen h-screen bg-[#36384e] flex items-center justify-center ${
         open ? "visible" : "hidden"
       }`}
       onClick={handleCloseModal}
